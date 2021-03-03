@@ -7,10 +7,10 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard',
+    'airbnb-base',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    'prettier/standard',
+    'plugin:prettier/recommended',
     'prettier/react'
   ],
   parser: '@typescript-eslint/parser',
@@ -23,14 +23,23 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    'no-console': 'off',
+    'import/no-unresolved': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        ts: 'never'
+      }
+    ]
   },
   settings: {
     'import/resolver': {
       typescript: {}
     },
     react: {
-      version: 'detect',
-    },
+      version: 'detect'
+    }
   }
-}
+};
