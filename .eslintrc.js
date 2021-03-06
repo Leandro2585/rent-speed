@@ -1,3 +1,3 @@
-const eslintConfig = require('@omnirepo/eslint-config')
+import eslintConfig from '@rent-speed/eslint-config';
 
-module.exports = eslintConfig
+export default eslintConfig;

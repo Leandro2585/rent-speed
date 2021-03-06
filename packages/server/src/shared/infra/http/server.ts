@@ -1,5 +1,6 @@
 import express from 'express';
 import routes from './routes';
+import '../typeorm/';
 
 const app = express();
 const port = 3333 || process.env.PORT_SERVER;
