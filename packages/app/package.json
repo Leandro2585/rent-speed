@@ -49,7 +49,7 @@
     "@babel/core": "~7.9.0",
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
-    "@types/react-native": "~0.63.2",
+    "@types/react-native": "~0.64.2",
     "@types/react-native-onboarding-swiper": "^1.1.1",
     "@types/react-native-vector-icons": "^6.4.6",
     "@types/styled-components": "^5.1.4",
