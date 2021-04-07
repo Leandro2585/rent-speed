@@ -1,22 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
+import AppLoading from 'expo-app-loading';
+import { NavigationContainer } from '@react-navigation/native';
+import {
+  Archivo_400Regular,
+  Archivo_500Medium,
+  Archivo_600SemiBold,
+  Archivo_700Bold,
+  useFonts,
+} from '@expo-google-fonts/archivo';
+import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f00',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
+import Routes from './src/routes';
+import AppProvider from './src/hooks';
 
 const App: React.FC = () => {
+  const [fontsLoaded] = useFonts({
+    Archivo_400Regular,
+    Archivo_500Medium,
+    Archivo_600SemiBold,
+    Archivo_700Bold,
+    Inter_400Regular,
+    Inter_500Medium,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <AppProvider>
+        <View style={{ flex: 1, backgroundColor: '#fff' }}>
+          <Routes />
+        </View>
+      </AppProvider>
+    </NavigationContainer>
   );
 };
 
