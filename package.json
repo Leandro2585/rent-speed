@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@rent-speed/eslint-config": "*",
-    "@types/jest": "^26.0.5",
+    "@types/jest": "^26.0.23",
     "git-commit-msg-linter": "^3.1.0",
     "jest": "^26.1.0",
     "ts-jest": "^26.1.3",
