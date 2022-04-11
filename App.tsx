@@ -1,13 +1,17 @@
-import React from 'react';
+import { ThemeProvider } from 'styled-components'
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import { Home } from './src/application/pages/home';
+import React from 'react';
+
+import { loadFonts } from '@application/utils';
+import { Home } from '@application/pages';
+import theme from '@application/styles/theme'
 
 export default function App() {
+  loadFonts()
   return (
-    <View>
-      <StatusBar style="auto" />
+    <ThemeProvider theme={theme}>
+      <StatusBar style='light' translucent/>
       <Home />
-    </View>
+    </ThemeProvider>
   );
 }

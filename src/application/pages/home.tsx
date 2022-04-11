@@ -1,11 +1,9 @@
 import React from 'react'
-import { Text } from 'react-native'
-import { Container } from '../styles/global'
+
+import { HeaderPage } from '@application/components/organisms'
 
 export const Home = () => {
   return (
-    <Container>
-      <Text>Olá mundo</Text>
-    </Container>
+    <HeaderPage />
   )
 }
