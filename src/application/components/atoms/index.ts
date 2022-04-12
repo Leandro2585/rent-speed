@@ -1,5 +1,0 @@
-export * from './logo'
-export * from './label'
-export * from './gas-icon'
-export * from './item-title'
-export * from './total-details'
